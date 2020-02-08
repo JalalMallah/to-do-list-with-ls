@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Tasks</title>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- My JS -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="new-task">
+        <input
+          type="text"
+          name="new-task-input"
+          class="new-task-input"
+          placeholder="Task to be added..."
+        />
+        <button class="add-task">Add New Task</button>
+      </div>
+      <hr />
+      <div class="heading">
+        <span class="arrow"><i class="far fa-arrow-alt-circle-up"></i></span>
+        <h1>My Tasks:</h1>
+      </div>
+      <div class="hide-tasks">
+        <div class="all-tasks"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  --hot-red: #ce1010;
+  --blue: #1e90ff;
+  --golden: #ffd700;
+}
+
+.container {
+  width: 50%;
+  min-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.new-task {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.new-task-input {
+  margin-bottom: 10px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  line-height: 50px;
+  outline: none;
+  font-size: 1.8rem;
+  border-radius: 2px 15px;
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+}
+
+.new-task-input::placeholder {
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.new-task-input:focus {
+  box-shadow: 0 0 3px var(--blue);
+}
+
+button.add-task {
+  line-height: 50px;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 2px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: var(--blue);
+  color: var(--golden);
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+button.add-task::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--golden);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+button.add-task:hover {
+  letter-spacing: 2px;
+}
+
+button.add-task:hover::before {
+  transform: scaleX(1);
+}
+
+hr {
+  margin: 20px auto;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(50, 50, 50, 0),
+    rgba(50, 50, 50, 0.75),
+    rgba(50, 50, 50, 0)
+  );
+}
+
+.heading {
+  display: flex;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.arrow i {
+  color: #333;
+  font-size: 2.4rem;
+  transition: transform 0.5s ease;
+}
+
+.arrow i.hide {
+  transform: rotate(180deg);
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 400;
+}
+
+.task-item {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 2px 15px;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task > label,
+.icon {
+  cursor: pointer;
+}
+
+.icon {
+  color: var(--hot-red);
+  transition: transform 0.2s ease;
+}
+.icon:hover {
+  transform: scale(1.4);
+}
+
+input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: forestgreen;
+}
+
+.hide-tasks {
+  overflow: hidden;
+}
+
+.all-tasks {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.all-tasks.hide {
+  transform: translateY(-110%);
+}
+
+.task {
+  transition: all 0.2s ease;
+}
+.task:hover {
+  letter-spacing: 1px;
+}
